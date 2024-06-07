@@ -1,11 +1,26 @@
 import Image from "next/image";
 
-import Navbar from "./components/layout/navbar";
+import Navbar from "./ui/layout/header";
+import SideMenu from "./ui/layout/sidemenu";
+import Footer from "./ui/layout/footer";
+
 export default function Home() {
 	return (
 		<>
 			<Navbar />
-			<main className="flex min-h-screen flex-col items-center justify-between p-24">
+			<div className="flex">
+				<section key="sideMenu" className="flex-auto">
+					<SideMenu />
+				</section>
+				<section key="mainContents" className="flex-auto p-8">
+					<main>
+						<div className="h-0 w-0 border-b-[30px] border-l-[20px] border-r-[20px] border-b-white border-l-transparent border-r-transparent" />
+						<h2>Create CSS preview page!</h2>
+					</main>
+				</section>
+			</div>
+			<Footer />
+			{/* <main className="flex min-h-screen flex-col items-center justify-between p-24">
 				<div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
 					<p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
 						Get started by editing&nbsp;
@@ -99,7 +114,7 @@ export default function Home() {
 						</p>
 					</a>
 				</div>
-			</main>
+			</main> */}
 		</>
 	);
 }
