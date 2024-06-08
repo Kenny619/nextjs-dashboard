@@ -1,6 +1,6 @@
 export default function Navbar() {
 	return (
-		<div className="navbar bg-base-100">
+		<nav className="navbar bg-base-200">
 			<div className="flex-none">
 				<button type="button" className="btn btn-square btn-ghost">
 					<svg
@@ -39,6 +39,6 @@ export default function Navbar() {
 					</svg>
 				</button>
 			</div>
-		</div>
+		</nav>
 	);
 }
